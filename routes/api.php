@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// 商品登録
+Route::post('/products', 'ProductController@createProduct');
+// 商品取得
+Route::get('/products', 'ProductController@getProducts');
